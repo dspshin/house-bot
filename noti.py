@@ -40,7 +40,7 @@ def howmuch(loc_param, date_param, filter_param):
             for tuples in rTuple.findall(item):
                 office[tuples[0]] = tuples[1].strip()
                 #print "\t", tuples[0], tuples[1]
-            row += office['년']+'/'+office['월']+'/'+office['일']+', '+office['법정동']+', '+office['주택유형']+', 대지면적:'+office['대지면적']+'m², 연면적:'+office['연면적']+'m², '+office['거래금액']+'만원\n'
+            row = office['년']+'/'+office['월']+'/'+office['일']+', '+office['법정동']+', '+office['주택유형']+', 대지면적:'+office['대지면적']+'m², 연면적:'+office['연면적']+'m², '+office['거래금액']+'만원\n'
         except:
             print str(datetime.now()).split('.')[0]
             traceback.print_exc(file=sys.stdout)
